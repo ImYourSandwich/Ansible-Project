@@ -1,4 +1,4 @@
-- name: Install & Configure Apache2 + PHP
+- name: Install Apache2 & PHP
   hosts: VM2
   tasks:
     - name: Update cache
