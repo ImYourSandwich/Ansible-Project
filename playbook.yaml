@@ -1,0 +1,12 @@
+- name: Install Base Packages
+  hosts: Virtual_Machines
+  tasks:
+    - name: Update cache
+      ansible.builtin.apt:
+        update_cache: yes
+    - name: Install sudo curl wget
+      ansible.builtin.apt:
+        pkg:
+          - sudo
+          - curl
+          - wget

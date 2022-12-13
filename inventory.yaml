@@ -1,0 +1,6 @@
+Virtual_Machines:
+  hosts:
+    VM1:
+      ansible_host: root@Debian-Database
+    VM2:
+      ansible_host: root@Debian-Web
