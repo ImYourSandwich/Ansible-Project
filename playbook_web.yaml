@@ -28,4 +28,3 @@
       command: echo "<?php phpinfo();" > /var/www/html/info.php
     - name: Create joomla dir
       command: mkdir /var/www/joomla
-      become: true
