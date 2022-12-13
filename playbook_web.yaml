@@ -20,3 +20,12 @@
           - libapache2-mod-php8.1
     - name: Restart apache2
       command: systemctl restart apache2
+
+- name: Configure Apache2
+  hosts: VM2
+  tasks:
+    - name: Create info.php
+      command: echo "<?php phpinfo();" > /var/www/html/info.php
+    - name: Create joomla dir
+      command: mkdir /var/www/joomla
+      become: true
