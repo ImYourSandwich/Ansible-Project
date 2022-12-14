@@ -1,0 +1,14 @@
+- name: "[MYSQL] - update cache"
+  apt:
+    update_cache: yes
+  
+- name: "[MYSQL] - install"
+apt: 
+  name: "{{ mysql_packages }}"
+  state: latest
+
+- name: "[MYSQL] - start mysql"
+  service:
+    name: "mysqld"
+    state: started
+    enabled: yes
